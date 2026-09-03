@@ -145,7 +145,7 @@ export function extractPayment(
       /Due[:\s]+(.+)/i,
       /Pay by[:\s]+(.+)/i,
     ]),
-    language: /[぀-ヿ一-龯]/.test(text)
+    language: /[\u3040-\u30ff\u4e00-\u9faf]/.test(text)
       ? "ja"
       : /[ก-๙]/.test(text)
         ? "th"
